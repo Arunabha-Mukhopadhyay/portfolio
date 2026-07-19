@@ -589,6 +589,13 @@ ul {
   margin-right: 4px;
 }
 
+.commit-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 16px;
+}
+
 .commit-link {
   display: inline-block;
   margin-top: 16px;
@@ -601,6 +608,18 @@ ul {
 
 .commit-link:hover {
   border-color: var(--accent-chain);
+}
+
+.commit-links .commit-link {
+  margin-top: 0;
+}
+
+.commit-link-live {
+  color: var(--accent-green);
+}
+
+.commit-link-live:hover {
+  border-color: var(--accent-green);
 }
 
 /* ---- education ---- */

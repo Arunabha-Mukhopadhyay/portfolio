@@ -210,11 +210,71 @@
         <p class="eyebrow">// projects</p>
         <h2 class="section-title">Recent commits.</h2>
         <p class="body-text section-lede">
-          Five shipped builds spanning agentic fraud detection, on-chain routing, RAG pipelines,
-          AI-driven inventory signals, and a full LMS platform.
+          Seven shipped builds spanning agentic fraud detection, on-chain routing, RAG pipelines,
+          AI-driven inventory signals, a voice-based interview agent, a MetaMask wallet agent, and a full LMS platform.
         </p>
 
         <div class="commit-log">
+
+
+          <article class="commit">
+            <div class="commit-meta">
+              <span class="commit-hash">d4c81a2</span>
+              <span class="branch-tag branch-ai">ai/llm</span>
+              <span class="commit-date">2026</span>
+            </div>
+            <h3 class="commit-title">AI Voice Interview Agent Platform</h3>
+            <p class="commit-desc">
+              Real-time, low-latency voice AI platform that conducts personalised technical
+              interviews — ingesting a candidate's resume, GitHub profile, LinkedIn profile, and
+              target job description to build a custom interview plan. A LangGraph state machine
+              (retrieve → gap-analysis → respond) drives the conversation over a WebSocket audio
+              stream, backed by a ChromaDB vector store for context retrieval and PostgreSQL for
+              session state.
+            </p>
+            <div class="commit-stat">
+              <span class="diff-plus">+4 sources</span> resume, GitHub, LinkedIn &amp; JD fused into one candidate
+              context
+            </div>
+            <div class="chip-row">
+              <span class="chip">FastAPI</span><span class="chip">LangChain</span><span class="chip">LangGraph</span>
+              <span class="chip">PostgreSQL</span><span class="chip">ChromaDB</span><span class="chip">Redis</span>
+              <span class="chip">AssemblyAI (STT)</span><span class="chip">ElevenLabs (TTS)</span>
+            </div>
+            <div class="commit-links">
+              <a href="https://github.com/Arunabha-Mukhopadhyay/AI-Interview-Agent" class="commit-link" target="_blank"
+                rel="noopener">view repository →</a>
+            </div>
+          </article>
+
+          <!-- AruDex -->
+          <article class="commit">
+            <div class="commit-meta">
+              <span class="commit-hash">7e1b40d</span>
+              <span class="branch-tag branch-chain">web3/defi</span>
+              <span class="commit-date">2026</span>
+            </div>
+            <h3 class="commit-title">AruDex — Intent-Based DEX Aggregator</h3>
+            <p class="commit-desc">
+              Real-time swap simulation engine — each request fans out to 6 parallel pool-reserve
+              RPC reads across Uniswap and SushiSwap with on-demand AMM math, computing slippage,
+              liquidity splits, and multi-hop routing (WETH→DAI→USDC) via binary search. Stale-data
+              detection (50-block tolerance) flags outdated pool data before strategy execution.
+            </p>
+            <div class="commit-stat">
+              <span class="diff-plus">+3 payloads</span> poolLogs, ammLogs &amp; strategy returned in a single round
+              trip
+            </div>
+            <div class="chip-row">
+              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Ethers.js</span>
+            </div>
+            <div class="commit-links">
+              <a href="https://arudex.onrender.com/" class="commit-link commit-link-live" target="_blank"
+                rel="noopener">live demo →</a>
+              <a href="https://github.com/Arunabha-Mukhopadhyay/AruDex" class="commit-link" target="_blank"
+                rel="noopener">view repository →</a>
+            </div>
+          </article>
 
           <!-- FinShield -->
           <article class="commit">
@@ -240,33 +300,12 @@
               <span class="chip">Groq API</span><span class="chip">pandas</span><span class="chip">scikit-learn</span>
               <span class="chip">React</span><span class="chip">Docker</span>
             </div>
-            <a href="https://github.com/AyushSid28/FinShield" class="commit-link" target="_blank" rel="noopener">view
-              repository →</a>
-          </article>
-
-          <!-- AruDex -->
-          <article class="commit">
-            <div class="commit-meta">
-              <span class="commit-hash">7e1b40d</span>
-              <span class="branch-tag branch-chain">web3/defi</span>
-              <span class="commit-date">2026</span>
+            <div class="commit-links">
+              <a href="https://finshield-bibp.onrender.com/" class="commit-link commit-link-live" target="_blank"
+                rel="noopener">live demo →</a>
+              <a href="https://github.com/AyushSid28/FinShield" class="commit-link" target="_blank" rel="noopener">view
+                repository →</a>
             </div>
-            <h3 class="commit-title">AruDex — Intent-Based DEX Aggregator</h3>
-            <p class="commit-desc">
-              Real-time swap simulation engine — each request fans out to 6 parallel pool-reserve
-              RPC reads across Uniswap and SushiSwap with on-demand AMM math, computing slippage,
-              liquidity splits, and multi-hop routing (WETH→DAI→USDC) via binary search. Stale-data
-              detection (50-block tolerance) flags outdated pool data before strategy execution.
-            </p>
-            <div class="commit-stat">
-              <span class="diff-plus">+3 payloads</span> poolLogs, ammLogs &amp; strategy returned in a single round
-              trip
-            </div>
-            <div class="chip-row">
-              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Ethers.js</span>
-            </div>
-            <a href="https://github.com/Arunabha-Mukhopadhyay/AruDex" class="commit-link" target="_blank"
-              rel="noopener">view repository →</a>
           </article>
 
           <!-- Resumizer -->
@@ -344,6 +383,31 @@
             </div>
             <a href="https://github.com/Arunabha-Mukhopadhyay/LMS_Iskcon" class="commit-link" target="_blank"
               rel="noopener">view repository →</a>
+          </article>
+          
+          <!-- AI Agent x MetaMask -->
+          <article class="commit">
+            <div class="commit-meta">
+              <span class="commit-hash">5b6e83f</span>
+              <span class="branch-tag branch-ai">ai/llm</span>
+              <span class="branch-tag branch-chain">web3/defi</span>
+              <span class="commit-date">2026</span>
+            </div>
+            <h3 class="commit-title">AI Agent × MetaMask — Conversational Wallet Assistant</h3>
+            <p class="commit-desc">
+              A module within a broader Blockchain projects monorepo pairing a conversational AI
+              agent with a MetaMask-connected client, letting a user query and act on their wallet
+              through natural language instead of manually navigating transaction flows.
+            </p>
+            <div class="chip-row">
+              <span class="chip">React</span><span class="chip">Ethers.js</span><span class="chip">MetaMask</span>
+            </div>
+            <div class="commit-links">
+              <a href="https://ai-metamask-client.onrender.com" class="commit-link commit-link-live" target="_blank"
+                rel="noopener">live demo →</a>
+              <a href="https://github.com/Arunabha-Mukhopadhyay/Blockchain/tree/main/AI_AGENT_MetaMask"
+                class="commit-link" target="_blank" rel="noopener">view repository →</a>
+            </div>
           </article>
 
         </div>
